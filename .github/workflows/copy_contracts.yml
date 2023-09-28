@@ -21,7 +21,7 @@ jobs:
           git clone https://github.com/hai-on-op/core.git hai-core
 
           # Copy the Solidity interfaces
-          cp hai-core/src/* contracts/hai-core/
+          cp -R hai-core/src/* contracts/hai-core/
 
           # Commit and push changes if interfaces are updated
           git config --global user.name "HAI Governance GitHub Actions"
