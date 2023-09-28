@@ -1,0 +1,31 @@
+name: Copy HAI Contracts
+
+on:
+  push:
+    branches:
+      - main # Adjust the branch as needed
+
+jobs:
+  copy-interfaces:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Copy HAI Contracts
+        env:
+          EXTERNAL_REPO_TOKEN: ${{ secrets.COPY_CONTRACTS_TOKEN }}
+        run: |
+          # Clone the external repository
+          git clone https://github.com/hai-on-op/core.git hai-core
+
+          # Copy the Solidity interfaces
+          cp hai-core/src/* contracts/hai-core/
+
+          # Commit and push changes if interfaces are updated
+          git config --global user.name "HAI Governance GitHub Actions"
+          git config --global user.email "dao@letsgethai.com"
+          git add .
+          git commit -m "Copy HAI Core Contracts"
+          git push
