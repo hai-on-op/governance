@@ -1,0 +1,9 @@
+@openzeppelin/=node_modules/@openzeppelin/contracts/
+
+
+
+@core-contracts/=contracts/hai-core/contracts/
+@core-interfaces/=contracts/hai-core/interfaces/
+@core-libraries/=contracts/hai-core/libraries/
+
+@script/=script/

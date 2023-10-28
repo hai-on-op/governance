@@ -1,0 +1,22 @@
+{
+  "name": "hai",
+  "version": "0.1.0",
+  "description": "Governance Contracts and Proposals for HAI",
+  "homepage": "https://github.com/hai-on-op/governance#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hai-on-op/governance.git"
+  },
+  "license": "MIT",
+  "author": "pesrtasty",
+  "contributors": [
+    "piesrtasty (https://github.com/piesrtasty)",
+  ],
+  "scripts": {
+    "deploy:gov:goerli": "bash -c 'source. env && forge script DeployGovernanceGoerli --with-gas-price 2000000000 -vvvvv --rpc-url $OP_GOERLI_RPC --broadcast --private-key $OP_GOERLI_DEPLOYER_PK --verify --etherscan-api-key $OP_ETHERSCAN_API_KEY'",
+    "deploy:gov:mainnet": "bash -c 'source. env && forge script DeployGovernanceMainnet --with-gas-price 2000000000 -vvvvv --rpc-url $OP_MAINNET_RPC --broadcast --private-key $OP_MAINNET_DEPLOYER_PK --verify --etherscan-api-key $OP_ETHERSCAN_API_KEY'"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.8.2"
+  }
+}
