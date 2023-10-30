@@ -2,8 +2,9 @@
 
 
 
-@core-contracts/=contracts/hai-core/contracts/
-@core-interfaces/=contracts/hai-core/interfaces/
-@core-libraries/=contracts/hai-core/libraries/
+@contracts/=contracts/hai-core/contracts/
+@interfaces/=contracts/hai-core/interfaces/
+@libraries/=contracts/hai-core/libraries/
 
 @script/=script/
+@governance/=src/contracts/governance/
