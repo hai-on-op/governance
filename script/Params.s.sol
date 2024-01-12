@@ -2,7 +2,7 @@
 pragma solidity 0.8.19;
 
 abstract contract Params {
-    string constant GOVERNOR_NAME = "HaiGovernor";
+    string constant GOVERNOR_NAME = "TestGovernor3";
     uint256 timelockMinDelay;
     address protocolToken;
     uint48 votingDelay;
