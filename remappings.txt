@@ -1,0 +1,5 @@
+@openzeppelin/=node_modules/@openzeppelin/contracts/
+
+@script/=script/
+@governance/=src/contracts/governance/
+@proposals/=src/contracts/proposals/
