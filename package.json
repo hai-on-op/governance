@@ -13,8 +13,8 @@
     "piesrtasty (https://github.com/piesrtasty)"
   ],
   "scripts": {
-    "deploy:gov:goerli": "bash -c 'source .env && forge script DeployGovernanceGoerli --with-gas-price 2000000000 -vvvvv --rpc-url $OP_GOERLI_RPC --broadcast --private-key $OP_GOERLI_DEPLOYER_PK --verify --etherscan-api-key $OP_ETHERSCAN_API_KEY'",
-    "deploy:gov:mainnet": "bash -c 'source .env && forge script DeployGovernanceMainnet --rpc-url $OP_MAINNET_RPC --broadcast --private-key $OP_MAINNET_DEPLOYER_PK --verify --etherscan-api-key $OP_ETHERSCAN_API_KEY'"
+    "script:goerli": "bash -c 'source .env && forge script GoerliScript --with-gas-price 2000000000 -vvvvv --rpc-url $OP_GOERLI_RPC --broadcast --private-key $OP_GOERLI_DEPLOYER_PK --verify --etherscan-api-key $OP_ETHERSCAN_API_KEY'",
+    "script:mainnet": "bash -c 'source .env && forge script MainnetScript --with-gas-price 2000000000 -vvvvv --rpc-url $OP_MAINNET_RPC --broadcast --private-key $OP_MAINNET_DEPLOYER_PK --verify --etherscan-api-key $OP_ETHERSCAN_API_KEY'"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.1"
